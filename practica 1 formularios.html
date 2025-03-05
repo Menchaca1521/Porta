@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			background-color: #22cda4;
+		}
+	</style>
+</head>
+	<h1 style="text-align: center;">Volskwagen Potosina</h1>
+
+<body>
+	<h2 style="text-align: center;">Compras online</h2>
+	<form style="text-align: center">
+	<fieldset>
+		<legend style="text-align: left;">Información general del cliente</legend>
+		<label for="Nombre" style="text-align: left";>Nombre: </label>
+		<input type="text" name="Nombre" id="Nombre" size="15" 
+		placeholder="Nombre" maxlength="30" title="Nombre" required>
+
+		<label for="paterno">Apellido paterno: </label>
+		<input type="text" name="paterno" id="paterno" size="15" 
+		placeholder="Apellido paterno" maxlength="30" title="Apellido paterno" required>
+
+		<label for="materno">Apellido materno: </label>
+		<input type="text" name="materno" id="materno" size="15" 
+		placeholder="Apellido materno" maxlength="30" title="Apellido materno" required><br/><br/>		
+
+		<label for="usuario">Nombre de usuario: </label>
+		<input type="text" name="usuario" id="usuario" size="15" 
+		placeholder="usuario" maxlength="30" title="usuario" required>
+
+		<label for="password">contraseña: </label>
+		<input type="text" name="password" id="password" size="20" 
+		placeholder="password" maxlength="20" title="contraseña" required>
+
+		<label for="date">fecha de registro: </label>
+		<input type="date" name="date" id="date" 
+		placeholder="Fecha de registro" required><br/>
+	</fieldset>
+	</form>	
+	<form style="text-align: center;">
+	<fieldset>
+		<legend style="text-align:left;">Datos por facturar</legend>
+			<label for="pais">Pais</label>
+			<select name="pais" id="pais" size="1">
+				<option value="1">México</option>
+				<option value="2">Brasil</option>
+				<option value="3">Argentina</option>
+				<option value="4">Perú</option>
+				<option value="5">USA</option>
+			</select>
+			<label for="ciudad">Ciudad</label>
+			<select name="ciudad" id="ciudad" size="1">
+				<option value="1">Guadalajara</option>
+				<option value="2">San Luis</option>
+				<option value="3">CDMX</option>
+				<option value="4">Puebla</option>
+			</select>
+			<label for="calle">calle: </label>
+			<input type="text" name="calle" id="calle" size="15" 
+			placeholder="Calle" maxlength="30" title="calle"><br/><br/>
+
+			<label for="casa">Número de casa</label>
+			<input type="number" name="casa" id="casa" size="4"
+			placeholder="Número exterior" maxlength="10">
+
+			<label for="colonia">Colonia</label>
+			<input type="text" name="colonia" id="colonia" size="15"
+			placeholder="Colonia" maxlength="30">
+
+			<label for="correo">E-mail</label>
+			<input type="email" name="correo" id="correo" size="15"
+			placeholder="E-mail" maxlength="30"><br/><br/>
+
+			<label for="RFC">R.F.C</label>
+			<input type="text" name="RFC" id="RFC" size="15"
+			placeholder="R.F.C" maxlength="30">
+
+			<label for="CP">C.P</label>
+			<input type="text" name="CP" id="CP" size="15"
+			placeholder="C.P" maxlength="30">
+
+			<input type="checkbox" name="terms" id="terms" required>
+			<label for="terms">Acepto términos y condiciones</label><br/><br/>
+
+			<input type="submit" name="enviar" id="enviar" value="enviar datos">
+			<input type="reset" name="borrar" id="borrar" value="restablecer">
+	</fieldset>		
+	</form>
+</body>
+<tfoot>
+	<footer>
+		<h3 style="text-align: right;">Febrero 2025, SLP.</h3>
+	</footer>
+</tfoot>
+</html>
