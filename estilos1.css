@@ -36,7 +36,7 @@ tr th{
     color: white;
 }
 
-tr:hover{
+table tr:hover{
     background-color: green;
     color: darkgray;
 }
