@@ -1,0 +1,32 @@
+ul{
+    list-style-type: none;
+    width: 20%;
+    background-color: beige;
+    padding: 0;
+    margin: 0;
+}
+
+li a{
+    display: block;
+    background-color: burlywood;
+    padding: 12px;
+    text-decoration: none;
+    font-family: arial,verdana,sans-serif;
+}
+
+li a:hover{
+    background-color: brown;
+    color: white;
+
+}
+
+li a.activo{
+    background-color: khaki;
+    color: black;
+}
+
+li a:hover:not(.activo){
+    background-color: brown;
+    color: white;
+
+}
