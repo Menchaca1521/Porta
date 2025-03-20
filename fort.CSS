@@ -1,0 +1,71 @@
+.slider {
+    width: 100%; /* Ajusta el tamaño al 80% del ancho de la pantalla */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    height: 300px; /* Altura fija del contenedor */
+    margin-bottom: 50px; /* Centrado horizontal */
+    background-color: #333; /* Gris oscuro */
+    overflow: hidden; /* Ocultar imágenes que se salen del contenedor */
+    position: relative; /* Necesario para posicionar las imágenes dentro */
+}
+
+@font-face{
+    font-family: 'fortnite';
+    src:url(/fuentes/fortnite.otf);
+}
+
+ /* Estilo para las imágenes del slider */
+ .slider-images {
+    display: flex;
+    transition: transform 1s ease; /* Animación suave al deslizar */
+}
+
+.slider-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes cubran todo el contenedor */
+}
+
+h1{
+    text-align: center;
+    font-size: 12vh;
+    color: white;
+}
+
+body {
+   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.imagenes{
+    width: 100vh;
+    gap: 0px;
+
+}
+
+.medio{
+    gap: 0px;
+    height: 36.7vh;
+    width: 100vh;
+}
