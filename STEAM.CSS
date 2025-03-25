@@ -1,0 +1,10 @@
+body{
+    background-color: #2A4365;
+}
+th{
+    width: 60%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 3px double blue;
+    background-color: transparent;
+}
