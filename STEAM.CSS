@@ -10,81 +10,29 @@ body{
     background-color: #1e2a47; /* Azul claro */
     color: #e0f7fa; 
 }
+
+/**tabla**/
 th{
     border-collapse: collapse;
-    width: 5%;
+    width: 100%;
     border: #004d7a ;
     background-color:#004d7a  ;
+    text-align: center;
+    padding: 10px 100px;
 }
-
-.clouds1{
-    position: absolute;
-    top: 15%;
-    left: 80%;
-    transform: translate(-25%, -25%);
-    width: auto;
-    height: auto;
-}
-.clouds2{
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    transform: translate(-25%, -25%);
-    width: auto;
-    height: auto;
-}
-.clouds3{
-    position: absolute;
-    top: 60%;
-    left: 70%;
-    transform: translate(-25%, -25%);
-    width: auto;
-    height: auto;
-}
-
-.clouds4{
-    position: absolute;
-    top: 45%;
-    left: 10%;
-    transform: translate(-50%,-50%);
-    width: auto;
-    height: auto;
-}
-
-.bigcloud{
-    position: absolute;
-    top: 72%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto;
+.table{
+    table-layout: fixed;
+    margin-top: 600px;
+    margin-bottom: 200px;
     width: 100%;
+
 }
 
-.bigcloud1{
-    position: absolute;
-    top: 76%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto;
+.sky-container {
+    position: relative;
     width: 100%;
-}
-
-.bigcloud2{
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto;
-    width: 100%;
-}
-
-.bigcloud3{
-    position: absolute;
-    top: 117%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: auto;
-    width: 100%;
+    height: 100vh; /* O ajusta según la altura deseada */
+    overflow: hidden;
 }
 
 
@@ -106,16 +54,46 @@ th{
     
 }
 
-.table{
-    margin-top: 500px;
-    margin-bottom: 200px;
-    
-}
-
 h1{
     margin-top: 25px;
     margin-bottom: 25px;
+    font-size: 60px;
+}
+h2{
+    font-size: 30px;
 }
 ul {
     margin-left: 30px;
 }
+li{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.clouds1, .clouds2, .clouds3, .clouds4 {
+    position: absolute;
+    width: 200px; /* Ajusta el tamaño */
+    height: auto;
+}
+
+
+.clouds1 { top: 5%; left: 80%; }
+.clouds2 { top: 10%; left: 25%; }
+.clouds3 { top: 23%; left: 70%; }
+.clouds4 { top: 24%; left: 1%; }
+
+
+.bigcloud, .bigcloud1, .bigcloud2, .bigcloud3 {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+
+.bigcloud { top: 38%; }
+.bigcloud1 { top: 42%; }
+.bigcloud2 { top: 49%; }
+.bigcloud3 { top: 80%; }
