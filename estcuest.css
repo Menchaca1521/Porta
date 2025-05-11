@@ -1,0 +1,20 @@
+body{
+background-color: #1b2838;
+color: #c7d5e0;
+
+
+}
+
+h1{
+font-size: 40px;
+
+
+}
+
+label{
+    font-size: 25px;
+}
+
+fieldset{
+    background-color: #2a475e;
+}
