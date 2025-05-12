@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuestionario de Minecraft</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <h1>Cuestionario de Minecraft</h1>
+  <form id="quizForm">
+    <div class="question">
+      <label>1. ¿En que año fue lanzado Minecraft?</label><br>
+      <input type="radio" name="q1" value="0"> 2010<br>
+      <input type="radio" name="q1" value="1"> 2009<br>
+      <input type="radio" name="q1" value="0"> 2008<br>
+    </div>
+
+    <div class="question">
+      <label>2. ¿Cual es el limite de altura actual en Minecraft?</label><br>
+      <input type="radio" name="q2" value="0"> 255<br>
+      <input type="radio" name="q2" value="1"> 320<br>
+      <input type="radio" name="q2" value="0"> 360<br>
+    </div>
+
+    <div class="question">
+      <label>3. ¿Cual de estos bichos no puede spawnear de manera natural?</label><br>
+      <input type="radio" name="q3" value="0"> Silverfish<br>
+      <input type="radio" name="q3" value="1"> Wither boss<br>
+      <input type="radio" name="q3" value="0"> Caballo esqueleto<br>
+    </div>
+
+    <div class="question">
+      <label>4. ¿Cual es el limte de stackeo de las ender pearl?</label><br>
+      <input type="radio" name="q4" value="0"> 64<br>
+      <input type="radio" name="q4" value="1"> 16<br>
+      <input type="radio" name="q4" value="0"> 10<br>
+    </div>
+
+    <div class="question">
+      <label>5. ¿Cual es el mob que mas daño hace de un golpe?</label><br>
+      <input type="radio" name="q5" value="1"> Creeper electrico<br>
+      <input type="radio" name="q5" value="0"> Wither boss<br>
+      <input type="radio" name="q5" value="0"> Warden<br>
+    </div>
+
+    <button type="button" onclick="evaluar()">Evaluar</button>
+  </form>
+
+  <div class="result" id="resultado"></div>
+  <div id="chartContainer">
+    <canvas id="resultChart"></canvas>
+  </div>
+
+  <button onclick="generarPDF()">Descargar PDF</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

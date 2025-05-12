@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #8fe38f;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.question {
+  margin-bottom: 15px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#chartContainer {
+  width: 80%;
+  margin: 30px auto;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+label{
+    color: black;
+    font-size: 30px;
+}
+
