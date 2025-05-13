@@ -83,6 +83,40 @@
             <li>SteamVR: Soporte para experiencias de realidad virtual, compatible con una variedad de dispositivos VR.</li>
         </ul>
 
+<div id="chatbot-button" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0078d7;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="Chatbot" style="width: 30px; height: 30px;">
+</div>
+
+<script>
+  var myLandbot;
+
+  function openLandbot() {
+    if (!myLandbot) {
+      myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2930628-1LDI00X7UEY3IDN7/index.json',
+      });
+    } else {
+      myLandbot.open();
+    }
+  }
+
+  document.getElementById('chatbot-button').addEventListener('click', openLandbot);
+</script>
+
+<script src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 
 </body>
 </html>
