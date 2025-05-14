@@ -4,186 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam</title>
-    <link rel="stylesheet" href="STEAM.CSS">
-   
+    <link type="text/css" rel="stylesheet" href="STEAM.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" type="image/svg">
 </head>
 <body>
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" type="image/svg">
-     <div class="table">
-        <table border>
-            <thead>
-                <tr>
-                    <th><a href="steam.html" style="color: white;">INICIO</a></th>
-                    <th><a href="SubpaginaSteam/IMPACTO.html" style="color: white;">HISTORIA</a></th>
-                    <th><a href="SubpaginaSteam/IMPACTO.html" style="color: white;">IMPACTO</a></th>
-                    <th><a href="SubpaginaSteam/situacion_actual.html" style="color: white;">NUESTRA SITUACION ACTUAL</a></th>
-                    <th><a href="SubpaginaSteam/visiones_a_futuro.html" style="color: white;">VISIONES A FUTURO</a></th>
-                    <th><a href="SubpaginaSteam/Productos_o_servicios.html" style="color: white;">PRODUCTOS O SERVICIOS</a></th>
-                    <th><a href="SubpaginaSteam/AYUDA.html" style="color: white;">AYUDA</a></th>
-                </tr>
-            </thead>
-        </table>
+    <!-- Barra de navegación mejorada -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="steam.html" class="nav-link">INICIO</a>
+            <a href="SubpaginaSteam/Historia.html" class="nav-link">HISTORIA</a>
+            <a href="SubpaginaSteam/IMPACTO.html" class="nav-link">IMPACTO</a>
+            <a href="SubpaginaSteam/situacion_actual.html" class="nav-link">SITUACIÓN ACTUAL</a>
+            <a href="SubpaginaSteam/visiones_a_futuro.html" class="nav-link">VISIONES FUTURO</a>
+            <a href="SubpaginaSteam/Productos_o_servicios.html" class="nav-link">PRODUCTOS</a>
+            <a href="SubpaginaSteam/AYUDA.html" class="nav-link">AYUDA</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="imagenes/Steam1.png" alt="Steam Logo" class="hero-image">
     </div>
     
-   
-
-    <div class="cuadrado">
-       <center><img src="imagenes/Steam1.png" class="imagen"></center>
+    <!-- Nubes decorativas -->
+    <div class="clouds">
+        <img src="imagenes/nube grande 1.png" class="cloud cloud-1">
+        <img src="imagenes/nube grande 1.png" class="cloud cloud-2">
+        <img src="imagenes/nube grande 1.png" class="cloud cloud-3">
+        <img src="imagenes/nube grande al reves.png" class="cloud cloud-4">
+        <img src="imagenes/nubeSheet1.png" class="small-cloud small-cloud-1">
+        <img src="imagenes/nubeSheet2.png" class="small-cloud small-cloud-2">
+        <img src="imagenes/nubeSheet3.png" class="small-cloud small-cloud-3">
     </div>
     
-
-    <div class="fondo">
-        <img src="imagenes/nube grande 1.png" class="nube">
+    <!-- Contenido principal -->
+    <main class="content">
+        <h1>¿Qué es Steam?</h1>
+        <h2>La mayor plataforma de videojuegos</h2>
+        
+        <div class="description">
+            <p>Steam es reconocida como la mayor plataforma de venta de videojuegos en el mundo con mucha diferencia. Contamos con el catálogo más extenso de videojuegos y aplicaciones técnicas o de desarrollo de software en la industria.</p>
+            <p>Dentro de nuestro catálogo podemos encontrar grandes títulos como Undertale, Borderlands, Stardew Valley entre miles de videojuegos que son jugados diariamente.</p>
+        </div>
+        
+        <h1 class="featured-title">DESTACADOS Y RECOMENDADOS</h1>
+        
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="imagenes/slider1.png" alt="Juego destacado 1">
+                <img src="imagenes/slider2.png" alt="Juego destacado 2">
+                <img src="imagenes/slider3.png" alt="Juego destacado 3">
+            </div>
+            <button class="carousel-prev">&#10094;</button>
+            <button class="carousel-next">&#10095;</button>
+        </div>
+    </main>
+    
+    <!-- Chatbot -->
+    <div id="chatbot-button" class="chatbot-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Chatbot">
     </div>
-    <div class="fondo">
-        <img src="imagenes/nube grande 1.png" class="nube2">
-    </div>
-    <div class="fondo">
-        <img src="imagenes/nube grande 1.png" class="nube3">
-    </div>
-    <div class="fondo">
-        <img src="imagenes/nube grande al reves.png" class="nube4">
-    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam Logo">
+        </div>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/steam_oficial" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/steam_oficial" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://youtube.com/steam_oficial" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Steam. Todos los derechos reservados.</p>
+            <p>Este trabajo fue un proyecto de clase para la maestra Imelda Deyanira Hernández</p>
+        </div>
+    </footer>
 
-    <div class="fondo">
-        <img src="imagenes/nubeSheet1.png" class="nubeS1">
-    </div>
-     <div class="fondo">
-        <img src="imagenes/nubeSheet2.png" class="nubeS2">
-    </div>
-     <div class="fondo">
-        <img src="imagenes/nubeSheet3.png" class="nubeS3">
-    </div>
-  
- 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-     <h1><center> Que es Steam</center></h1><br/>
-     <br/>
-     <br/>
-    <p><h1><center>La mayor plataforma de videojuegos</center></h1></p>
+    <script src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script>
+        // JavaScript para el carrusel
+        const carousel = document.querySelector('.carousel-images');
+        const totalSlides = document.querySelectorAll('.carousel-images img').length;
+        let index = 0;
 
-    <div class="margen">
-          <h2><center>Steam, es reconocida como la mayor plataforma de venta de videojuegos en
-            el mundo con mucha diferencia, somos los que contamos con el catalogo mas extenso 
-            en videojuegos y aplicaciones tecnicas o de desarrollo de software en la industria.
-            Dentro de nuestro catalogo podemos encontrar grandes titulos como undertale, Borderlands
-            Stardew Valley entre miles y miles de videojuegos que son jugados diariamente.
-          </center></h2>
-    </div> <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <center><h1>DESTACADOS Y RECOMENDADOS</h1></center>
-     <br/>
-    <br/>
-    <br/>
-<div class="carrusel">
-  <div class="carrusel-imagenes">
-    <img src="imagenes/slider1.png" alt="Imagen 1">
-    <img src="imagenes/slider2.png" alt="Imagen 2">
-    <img src="imagenes/slider3.png" alt="Imagen 3">
-  </div>
-  <button class="anterior">&#10094;</button>
-  <button class="siguiente">&#10095;</button>
-</div>
+        function showSlide(i) {
+            carousel.style.transform = `translateX(-${i * 100}%)`;
+        }
 
-<script>
-  const carrusel = document.querySelector('.carrusel-imagenes');
-  const totalSlides = document.querySelectorAll('.carrusel-imagenes img').length;
-  let index = 0;
+        document.querySelector('.carousel-next').addEventListener('click', () => {
+            index = (index + 1) % totalSlides;
+            showSlide(index);
+        });
 
-  function mostrarSlide(i) {
-    carrusel.style.transform = `translateX(-${i * 100}vw)`;
-  }
+        document.querySelector('.carousel-prev').addEventListener('click', () => {
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide(index);
+        });
 
-  document.querySelector('.siguiente').addEventListener('click', () => {
-    index = (index + 1) % totalSlides;
-    mostrarSlide(index);
-  });
+        // Cambio automático cada 5 segundos
+        setInterval(() => {
+            index = (index + 1) % totalSlides;
+            showSlide(index);
+        }, 5000);
 
-  document.querySelector('.anterior').addEventListener('click', () => {
-    index = (index - 1 + totalSlides) % totalSlides;
-    mostrarSlide(index);
-  });
+        // JavaScript para el menú responsive
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar-container');
 
-  // Cambio automático cada 3 segundos
-  setInterval(() => {
-    index = (index + 1) % totalSlides;
-    mostrarSlide(index);
-  }, 5000);
-</script>
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
 
-<div id="chatbot-button" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #0078d7;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 9999;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Chatbot" style="width: 30px; height: 30px;">
-</div>
+        // Chatbot
+        var myLandbot;
 
-<script>
-  var myLandbot;
+        function openLandbot() {
+            if (!myLandbot) {
+                myLandbot = new Landbot.Livechat({
+                    configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2930628-1LDI00X7UEY3IDN7/index.json',
+                });
+            } else {
+                myLandbot.open();
+            }
+        }
 
-  function openLandbot() {
-    if (!myLandbot) {
-      myLandbot = new Landbot.Livechat({
-        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2930628-1LDI00X7UEY3IDN7/index.json',
-      });
-    } else {
-      myLandbot.open();
-    }
-  }
-
-  document.getElementById('chatbot-button').addEventListener('click', openLandbot);
-</script>
-
-<script src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+        document.getElementById('chatbot-button').addEventListener('click', openLandbot);
+    </script>
 </body>
-<footer style="background-color: #121212; color: #ccc; padding: 20px 10px;">
-  <div style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
-    
-    <div style="flex: 1; min-width: 200px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" 
-           alt="Steam Logo" style="width: 120px; height: auto;">
-    </div>
-    </br></br></br>
-  </div>
-
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="https://instagram.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
-           alt="Instagram" style="width: 50px;">
-    </a>
-    <a href="https://twitter.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" 
-           alt="Twitter" style="width: 50px;">
-    </a>
-    <a href="https://youtube.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
-           alt="YouTube" style="width: 50px;">
-    </a>
-  </div>
-
-  <div style="text-align: center; margin-top: 15px;">
-    <p style="font-size: 14px;">&copy; 2025 Steam. Todos los derechos reservados.Este trabajo fue un proyecto de clase para la maestra
-      Imelda Deyanira Hernandez
-    </p>
-  </div>
-</footer>
-
 </html>
