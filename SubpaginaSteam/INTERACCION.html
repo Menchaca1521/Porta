@@ -1,40 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Interactivo</title>
+    <link rel="text/css" type="stylesheet" href="STEAM.CSS">
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+ 
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+             background-color: #1e2a47; /* Azul claro */
+            color: #e0f7fa;
+        }
+        .contenedor {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .publicaciones {
+            margin-top: 20px;
+        }
+        .publicacion {
+            background-color: #e9f7ef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+ 
+        }
+        h1{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 60px;
     }
-
-    body {
-      background-color: #1e2a47; /* ejemplo */
-      color: white;           /* ejemplo */
+    h2{
+    font-size: 30px;
     }
-
-    h1 {
-      margin-top: 25px;
-      margin-bottom: 25px;
-      font-size: 60px;
-    }
-
-    h2 {
-      font-size: 30px;
-    }
-
-    ul {
-      margin-left: 30px;
-    }
-
-    li {
-      font-size: 30px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
-
+    </style>
 </head>
+<body>
+    <center><h1>Blog</h1>
+    <h2>En este apartado eres libre de comentar tus opiniones acerca de la nuestra pagina...</h2></center>
+    <div class="contenedor">
+        <h2>Escribe tu publicación</h2>
+        <textarea id="contenido" placeholder="Escribe algo..."></textarea><br>
+        <button onclick="publicar()">Publicar</button>
+ 
+        <div class="publicaciones" id="publicaciones">
+            <!-- Aquí se mostrarán las publicaciones -->
+        </div>
+    </div>
+ 
+    <script>
+        function publicar() {
+            // Obtener el contenido del cuadro de texto
+            const contenido = document.getElementById('contenido').value;
+           
+            if (contenido.trim() === "") {
+                alert("Por favor, escribe algo para publicar.");
+                return;
+            }
+ 
+            // Crear una nueva publicación
+            const nuevaPublicacion = document.createElement('div');
+            nuevaPublicacion.classList.add('publicacion');
+            nuevaPublicacion.textContent = contenido;
+ 
+            // Mostrar la publicación en el contenedor de publicaciones
+            const publicacionesContainer = document.getElementById('publicaciones');
+            publicacionesContainer.appendChild(nuevaPublicacion);
+ 
+            // Limpiar el cuadro de texto después de publicar
+            document.getElementById('contenido').value = '';
+        }
+    </script>
+</body>
+</html>
