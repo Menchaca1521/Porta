@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #1e2a47; /* ejemplo */
-      color: white;           /* ejemplo */
-    }
-
-    h1 {
-      margin-top: 25px;
-      margin-bottom: 25px;
-      font-size: 60px;
-    }
-
-    h2 {
-      font-size: 30px;
-    }
-
-    ul {
-      margin-left: 30px;
-    }
-
-    li {
-      font-size: 30px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
-
+  <meta charset="UTF-8">
+  <title>Cuestionario sobre Steam</title>
+  <link rel="stylesheet" href="STEAM.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+<body>
+  <section id="sec">
+    <h1>Sobre nuestro servicio</h1>
+    <form id="formulario">
+      <fieldset>
+        <label for="usuario">Escriba su usuario de steam</label><br>
+        <input type="text" id="usuario" placeholder="user"><br><br>
+
+        <label for="contrasena">Escriba su contraseña</label><br>
+        <input type="password" id="contrasena" placeholder="password"><br><br>
+
+        <label for="opinion">¿Cuál es su opinión acerca de Steam?</label><br>
+        <input type="text" id="opinion" maxlength="400"><br><br>
+
+        <label for="errores">¿Ha notado errores en nuestro servicio?</label><br>
+        <input type="text" id="errores" maxlength="400"><br><br>
+
+        <label>Califique el servicio que Steam le ofrece</label><br>
+        <input type="radio" name="cal" value="Muy bueno">Muy bueno<br>
+        <input type="radio" name="cal" value="Bueno">Bueno<br>
+        <input type="radio" name="cal" value="Decente">Decente<br>
+        <input type="radio" name="cal" value="Malo">Malo<br>
+        <input type="radio" name="cal" value="Muy malo">Muy malo<br><br>
+
+        <label for="juegos">¿Cuántos juegos posee actualmente en Steam?</label><br>
+        <input type="number" id="juegos"><br><br>
+
+        <label for="mas_jugado">¿Cuál ha sido el juego al que más horas le ha invertido?</label><br>
+        <input type="text" id="mas_jugado"><br><br>
+
+        <label for="creacion">¿Cuándo creó su cuenta de Steam?</label><br>
+        <input type="date" id="creacion"><br><br>
+
+        <label for="sugerencias">¿Qué juegos cree que encajarían en la biblioteca de Steam?</label><br>
+        <input type="text" id="sugerencias"><br><br>
+      </fieldset>
+      <input type="submit" value="Enviar respuestas"><br><br>
+      <button type="button" onclick="generarPDF()">Generar PDF</button>
+    </form>
+
+    <!-- Contenedor para mostrar el PDF -->
+    <div id="visor-pdf" style="margin-top: 20px;"></div>
+  </section>
+
+  <script>
+    async function generarPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const radioValue = document.querySelector('input[name="cal"]:checked')?.value || "No especificado";
+
+      const contenido = `
+Usuario: ${document.getElementById('usuario').value}
+Contraseña: ${document.getElementById('contrasena').value}
+Opinión: ${document.getElementById('opinion').value}
+Errores: ${document.getElementById('errores').value}
+Calificación: ${radioValue}
+Juegos en Steam: ${document.getElementById('juegos').value}
+Juego más jugado: ${document.getElementById('mas_jugado').value}
+Fecha de creación: ${document.getElementById('creacion').value}
+Sugerencias de juegos: ${document.getElementById('sugerencias').value}
+`;
+
+      doc.text(contenido, 15, 15);
+
+      const pdfBlob = doc.output('blob');
+
+      const url = URL.createObjectURL(pdfBlob);
+
+      const visor = document.getElementById('visor-pdf');
+      visor.innerHTML = `<iframe width="100%" height="600px" src="${url}" frameborder="0"></iframe>`;
+    }
+  </script>
+</body>
+</html>
