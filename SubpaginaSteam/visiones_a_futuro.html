@@ -1,61 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visiones a futuro</title>
-    <link type="text/css" rel="stylesheet" href="STEAM.CSS">
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" type="image/svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista General Steam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: white;
+      padding: 20px;
+    }
+ 
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+ 
+    .subtitulo {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+ 
+    .graficos-container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+ 
+    .jugadores-datos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+ 
+    .secciones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+ 
+    .card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      flex: 1;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+ 
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+ 
+    .juego {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+ 
+    .juego img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+ 
+    .juego-info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+ 
+    .boton-ver {
+      display: block;
+      margin-top: 15px;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+ 
+    .boton-ver:hover {
+      background-color: #444;
+    }
+  </style>
 </head>
 <body>
-      <nav class="navbar">
-        <div class="navbar-container">
-            <a href="https://menchaca1521.github.io/Porta/steam.html" class="nav-link">INICIO</a>
-            <a href="Historia.html" class="nav-link">HISTORIA</a>
-            <a href="IMPACTO.html" class="nav-link">IMPACTO</a>
-            <a href="situacion_actual.html" class="nav-link">SITUACIÓN ACTUAL</a>
-            <a href="visiones_a_futuro.html" class="nav-link">VISIONES FUTURO</a>
-            <a href="Productos_o_servicios.html" class="nav-link">PRODUCTOS</a>
-            <a href="SubpaginaSteam/INTERACCION.html" class="nav-link">INTERACCIÓN</a>
-            <a href="AYUDA.html" class="nav-link">AYUDA</a>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
-      <h1><center> Visiones a Futuro </center></h1>
-            <h2>Valve continúa innovando y adaptándose a las cambiantes demandas del mercado. La empresa ha reforzado políticas para garantizar una experiencia 
-                de usuario de calidad, como la prohibición de juegos que obligan a los jugadores a ver anuncios intrusivos. Además, se espera que Valve siga explorando
-                nuevas tecnologías y colaboraciones para mantener a Steam a la vanguardia de la industria del videojuego.</h2>
-</body>
-    <footer style="background-color: #121212; color: #ccc; padding: 20px 10px;">
-  <div style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
-    
-    <div style="flex: 1; min-width: 200px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" 
-           alt="Steam Logo" style="width: 120px; height: auto;">
+ 
+  <h1>VISTA GENERAL</h1>
+  <p class="subtitulo">Los juegos más vendidos y más jugados en Steam</p>
+ 
+  <div class="graficos-container">
+    <h2>JUGADORES EN LÍNEA</h2>
+    <canvas id="graficoJugadores" height="150"></canvas>
+    <div class="jugadores-datos">
+      <div><strong>36,078,315</strong> <span style="color: lightgreen;">PICO EN LÍNEA</span></div>
+      <div><strong>30,582,389</strong> <span style="color: lightblue;">EN LÍNEA AHORA</span></div>
     </div>
   </div>
-
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="https://instagram.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
-           alt="Instagram" style="width: 50px;">
-    </a>
-    <a href="https://twitter.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" 
-           alt="Twitter" style="width: 50px;">
-    </a>
-    <a href="https://youtube.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
-           alt="YouTube" style="width: 50px;">
-    </a>
-  </div>
-
-  <div style="text-align: center; margin-top: 15px;">
-    <p style="font-size: 14px;">&copy; 2025 Steam. Todos los derechos reservados.Este trabajo fue un proyecto de clase para la maestra
-      Imelda Deyanira Hernandez
-    </p>
-  </div>
-</footer>
+ 
+  <div class="secciones">
+    <div class="card">
+      <h2>JUEGO MÁS VENDIDO</h2>
+      <div class="juego">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="CS2">
+        <div class="juego-info">
+          <span>1. Counter-Strike 2</span>
+        </div>
+      </div>
+      <div class="juego"><div class="juego-info">2. PUBG: BATTLEGROUNDS</div></div>
+      <div class="juego"><div class="juego-info">3. DOOM: The Dark Ages</div></div>
+      <div class="juego"><div class="juego-info">4. The Precinct</div></div>
+      <div class="juego"><div class="juego-info">5. Clair Obscur: Expedition 33</div></div>
+    </div>
+ 
+    <div class="card">
+      <h2>JUEGO MÁS JUGADO</h2>
+      <div class="juego">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="CS2">
+        <div class="juego-info">
+          <span>1. Counter-Strike 2</span>
+          <span>1,260,923</span>
+        </div>
+      </div>
+      <div class="juego"><div class="juego-info"><span>2. Dota 2</span><span>507,735</span></div></div>
+      <div class="juego"><div class="juego-info"><span>3. PUBG</span><span>274,592</span></div></div>
+      <div class="juego"><div class="juego-info"><span>4. Apex Legends</span><span>128,976</span></div></div>
+      <div class="juego"><div class="juego-info"><span>5. Rust</span><span>120,800</span></div></div>
+    </div>
+  <script>
+    const ctx = document.getElementById('graficoJugadores').getContext('2d');
+    const grafico = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['0h', '3h', '6h', '9h', '12h', '15h', '18h', '21h', '24h'],
+        datasets: [{
+          label: 'Jugadores en línea',
+          data: [21000000, 19000000, 18500000, 22000000, 25000000, 28000000, 30000000, 33000000, 36000000],
+          borderColor: 'limegreen',
+          backgroundColor: 'rgba(0,255,0,0.2)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: false,
+            ticks: {
+              color: 'white',
+              callback: value => value.toLocaleString()
+            },
+            grid: { color: '#333' }
+          },
+          x: {
+            ticks: { color: 'white' },
+            grid: { color: '#333' }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: context => context.parsed.y.toLocaleString() + ' jugadores'
+            }
+          }
+        }
+      }
+    });
+  </script>
+ 
+</body>
 </html>
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista General Steam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: white;
+      padding: 20px;
+    }
+ 
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+ 
+    .subtitulo {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+ 
+    .graficos-container {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+ 
+    .jugadores-datos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+ 
+    .secciones {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+ 
+    .card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      flex: 1;
+      border-radius: 10px;
+      min-width: 300px;
+    }
+ 
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+ 
+    .juego {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+ 
+    .juego img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+ 
+    .juego-info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+ 
+    .boton-ver {
+      display: block;
+      margin-top: 15px;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+ 
+    .boton-ver:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1>VISTA GENERAL</h1>
+  <p class="subtitulo">Los juegos más vendidos y más jugados en Steam</p>
+ 
+  <div class="graficos-container">
+    <h2>JUGADORES EN LÍNEA</h2>
+    <canvas id="graficoJugadores" height="150"></canvas>
+    <div class="jugadores-datos">
+      <div><strong>36,078,315</strong> <span style="color: lightgreen;">PICO EN LÍNEA</span></div>
+      <div><strong>30,582,389</strong> <span style="color: lightblue;">EN LÍNEA AHORA</span></div>
+    </div>
+  </div>
+ 
+  <div class="secciones">
+    <div class="card">
+      <h2>JUEGO MÁS VENDIDO</h2>
+      <div class="juego">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="CS2">
+        <div class="juego-info">
+          <span>1. Counter-Strike 2</span>
+        </div>
+      </div>
+      <div class="juego"><div class="juego-info">2. PUBG: BATTLEGROUNDS</div></div>
+      <div class="juego"><div class="juego-info">3. DOOM: The Dark Ages</div></div>
+      <div class="juego"><div class="juego-info">4. The Precinct</div></div>
+      <div class="juego"><div class="juego-info">5. Clair Obscur: Expedition 33</div></div>
+    </div>
+ 
+    <div class="card">
+      <h2>JUEGO MÁS JUGADO</h2>
+      <div class="juego">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="CS2">
+        <div class="juego-info">
+          <span>1. Counter-Strike 2</span>
+          <span>1,260,923</span>
+        </div>
+      </div>
+      <div class="juego"><div class="juego-info"><span>2. Dota 2</span><span>507,735</span></div></div>
+      <div class="juego"><div class="juego-info"><span>3. PUBG</span><span>274,592</span></div></div>
+      <div class="juego"><div class="juego-info"><span>4. Apex Legends</span><span>128,976</span></div></div>
+      <div class="juego"><div class="juego-info"><span>5. Rust</span><span>120,800</span></div></div>
+    </div>
+  <script>
+    const ctx = document.getElementById('graficoJugadores').getContext('2d');
+    const grafico = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['0h', '3h', '6h', '9h', '12h', '15h', '18h', '21h', '24h'],
+        datasets: [{
+          label: 'Jugadores en línea',
+          data: [21000000, 19000000, 18500000, 22000000, 25000000, 28000000, 30000000, 33000000, 36000000],
+          borderColor: 'limegreen',
+          backgroundColor: 'rgba(0,255,0,0.2)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: false,
+            ticks: {
+              color: 'white',
+              callback: value => value.toLocaleString()
+            },
+            grid: { color: '#333' }
+          },
+          x: {
+            ticks: { color: 'white' },
+            grid: { color: '#333' }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: context => context.parsed.y.toLocaleString() + ' jugadores'
+            }
+          }
+        }
+      }
+    });
+  </script>
+ 
+</body>
+</html>
+ 
