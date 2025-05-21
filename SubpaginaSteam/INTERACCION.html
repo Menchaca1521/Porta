@@ -6,6 +6,87 @@
     <title>Blog Interactivo</title>
     <link type="text/css" rel="stylesheet" href="STEAM.CSS">
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" type="image/svg">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        .contenedor {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #1b2838;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2a475e;
+        }
+
+        .publicaciones {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .publicacion {
+            background-color: #e0e0e0;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            font-size: 15px;
+            word-wrap: break-word;
+        }
+
+        h1, h2 {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #121212;
+            color: #ccc;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        footer img {
+            width: 50px;
+        }
+
+        footer div {
+            text-align: center;
+        }
+
+        .footer-logo img {
+            width: 120px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -14,79 +95,63 @@
             <a href="Historia.html" class="nav-link">HISTORIA</a>
             <a href="IMPACTO.html" class="nav-link">IMPACTO</a>
             <a href="situacion_actual.html" class="nav-link">SITUACIÓN ACTUAL</a>
-            <a href="visiones_a_futuro.html" class="nav-link">VISIONES FUTURO</a>
+            <a href="visiones_a_futuro.html" class="nav-link">VISIONES FUTURO</a>
             <a href="Productos_o_servicios.html" class="nav-link">PRODUCTOS</a>
             <a href="INTERACCION.html" class="nav-link">INTERACCIÓN</a>
             <a href="AYUDA.html" class="nav-link">AYUDA</a>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
-    <center><h1>Blog</h1>
-    <h2>En este apartado eres libre de comentar tus opiniones acerca de la nuestra pagina...</h2></center>
+
+    <h1>Blog</h1>
+    <h2>En este apartado eres libre de comentar tus opiniones acerca de nuestra página...</h2>
+
     <div class="contenedor">
         <h2>Escribe tu publicación</h2>
         <textarea id="contenido" placeholder="Escribe algo..."></textarea><br>
         <button onclick="publicar()">Publicar</button>
- 
+
         <div class="publicaciones" id="publicaciones">
             <!-- Aquí se mostrarán las publicaciones -->
         </div>
     </div>
- 
+
     <script>
         function publicar() {
-            // Obtener el contenido del cuadro de texto
-            const contenido = document.getElementById('contenido').value;
-           
-            if (contenido.trim() === "") {
+            const contenido = document.getElementById('contenido').value.trim();
+            if (contenido === "") {
                 alert("Por favor, escribe algo para publicar.");
                 return;
             }
- 
-            // Crear una nueva publicación
+
             const nuevaPublicacion = document.createElement('div');
             nuevaPublicacion.classList.add('publicacion');
             nuevaPublicacion.textContent = contenido;
- 
-            // Mostrar la publicación en el contenedor de publicaciones
-            const publicacionesContainer = document.getElementById('publicaciones');
-            publicacionesContainer.appendChild(nuevaPublicacion);
- 
-            // Limpiar el cuadro de texto después de publicar
+
+            document.getElementById('publicaciones').appendChild(nuevaPublicacion);
             document.getElementById('contenido').value = '';
         }
     </script>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam Logo">
+        </div>
+
+        <div style="margin-top: 20px;">
+            <a href="https://instagram.com/steam_oficial" target="_blank" style="margin: 0 15px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/steam_oficial" target="_blank" style="margin: 0 15px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+            </a>
+            <a href="https://youtube.com/steam_oficial" target="_blank" style="margin: 0 15px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+            </a>
+        </div>
+
+        <div style="margin-top: 15px;">
+            <p style="font-size: 14px;">&copy; 2025 Steam. Todos los derechos reservados. Este trabajo fue un proyecto de clase para la maestra Imelda Deyanira Hernández.</p>
+        </div>
+    </footer>
 </body>
-    <footer style="background-color: #121212; color: #ccc; padding: 20px 10px;">
-  <div style="display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
-    
-    <div style="flex: 1; min-width: 200px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" 
-           alt="Steam Logo" style="width: 120px; height: auto;">
-    </div>
-  </div>
-
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="https://instagram.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
-           alt="Instagram" style="width: 50px;">
-    </a>
-    <a href="https://twitter.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" 
-           alt="Twitter" style="width: 50px;">
-    </a>
-    <a href="https://youtube.com/steam_oficial" target="_blank" style="margin: 0 15px;">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" 
-           alt="YouTube" style="width: 50px;">
-    </a>
-  </div>
-
-  <div style="text-align: center; margin-top: 15px;">
-    <p style="font-size: 14px;">&copy; 2025 Steam. Todos los derechos reservados.Este trabajo fue un proyecto de clase para la maestra
-      Imelda Deyanira Hernandez
-    </p>
-  </div>
-</footer>
 </html>
